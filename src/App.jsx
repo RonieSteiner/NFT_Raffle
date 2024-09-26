@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { ButtonHard, ButtonSoft } from './buttons';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const handleClick = () => {
+    alert('Botão clicado!');
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="Header">
+
+        <ButtonSoft onClick={handleClick} text={'Explorar Rifas'}></ButtonSoft>
+        <ButtonSoft onClick={handleClick} text={'Criar Rifas'}></ButtonSoft>
+        <ButtonSoft onClick={handleClick} text={'Minhas Rifas'}></ButtonSoft>
+        <ButtonHard onClick={handleClick} text={'Conectar Carteira'}></ButtonHard>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="container">
+
+        <div className="main-content">
+          <h1>Conteúdo Principal</h1>
+          <p>Este é o conteúdo principal da aplicação.</p>
+        </div>
+
+        <div className="right-column">
+          <h2>Coluna da Direita</h2>
+          <p>Este é o conteúdo da coluna da direita.</p>
+        </div>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -12,10 +12,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #d4972e);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #d4972e);
 }
 
 @keyframes logo-spin {
@@ -39,4 +39,34 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* App.css */
+.container {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(0,0,0,0.3);
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.right-column {
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(0,0,0,0.3);
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.header {
+  display: contents;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
